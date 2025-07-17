@@ -14,6 +14,10 @@ struct Recipe: Identifiable {
     var ingredients: [Ingredient]
     var directions: [Direction]
     
+    var isValid: Bool {
+      mainInformation.isValid && !ingredients.isEmpty && !directions.isEmpty
+    }
+    
     init() {
         self.init(mainInformation: MainInformation(name: "", description: "", author: "", category: .breakfast),
                   ingredients: [],
@@ -39,7 +43,12 @@ struct MainInformation {
         case dinner = "Dinner"
         case dessert = "Dessert"
     }
-}
+    
+    var isValid: Bool {
+        !name.isEmpty && !description.isEmpty && !author.isEmpty
+      }
+    }
+
 
 struct Direction {
     var description: String
