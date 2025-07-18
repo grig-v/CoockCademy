@@ -31,6 +31,8 @@ struct RecipesListView: View {
         .toolbar(content: {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
+                    newRecipe = Recipe()
+                    newRecipe.mainInformation.category = recipes[0].mainInformation.category
                     isPresenting = true
                 }, label: {
                     Image(systemName: "plus")
