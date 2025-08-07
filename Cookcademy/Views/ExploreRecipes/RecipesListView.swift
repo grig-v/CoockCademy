@@ -46,15 +46,13 @@ struct RecipesListView: View {
                 ModifyRecipeView(recipe: $newRecipe)
                     .toolbar(content: {
                         ToolbarItem(placement: .topBarLeading) {
-                            Button(action: {
+                            Button("Dimiss") {
                                 isPresenting = false
-                            }, label: {
-                                Text("Dismiss")
-                            })
+                            }
                         }
                         ToolbarItem(placement: .confirmationAction) {
                             if newRecipe.isValid {
-                                Button("Add") {  // FIXME: кнопка не исчезает
+                                Button("Add") {
                                     recipeData.add(recipe: newRecipe)
                                     isPresenting = false
                                 }

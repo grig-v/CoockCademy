@@ -402,26 +402,5 @@ extension Recipe {
                 Direction(description: "Pour in buttered loaf and bake 1 hour or until knife inserted comes out clean", isOptional: false)
                ]
         ),
-        Recipe(mainInformation: MainInformation(name: "Sandra's pussy",
-                                                description: "Lick it all!",
-                                                author: "Vlad G",
-                                                category: .dinner),
-               ingredients: [
-                Ingredient(name: "Sandra", quantity: 53, unit: .kg),
-                Ingredient(name: "Food", quantity: 1, unit: .none),
-                Ingredient(name: "НЕЖНЕЕ", quantity: 100, unit: .kg),
-                Ingredient(name: "Fuck hard", quantity: 1, unit: .none),
-                Ingredient(name: "Skillfull tongue", quantity: 1, unit: .none),
-                Ingredient(name: "Condoms", quantity: 2, unit: .tbs)
-               ],
-               directions:  [
-                Direction(description: "Feed her", isOptional: false),
-                Direction(description: "Kiss her", isOptional: false),
-                Direction(description: "Undress her", isOptional: false),
-                Direction(description: "Love her (don't forget to add all НЕЖНЕЕ you have)", isOptional: false),
-                Direction(description: "Make her cum (try your best)", isOptional: false),
-                Direction(description: "Chill with her", isOptional: false)
-               ]
-        ),
     ]
 }
