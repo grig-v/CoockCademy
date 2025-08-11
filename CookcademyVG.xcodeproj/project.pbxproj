@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF540E482E45FD4E0056397B /* ModifyIngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF540E472E45FD4E0056397B /* ModifyIngredientView.swift */; };
+		AF540E4A2E4617360056397B /* ModifyIngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF540E492E4617360056397B /* ModifyIngredientsView.swift */; };
 		AF6A5CFF2E1FB340007E0F5A /* RecipeCategoryGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6A5CFE2E1FB340007E0F5A /* RecipeCategoryGridView.swift */; };
 		AF6A5D672E27D4F9007E0F5A /* ModifyRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6A5D662E27D4F9007E0F5A /* ModifyRecipeView.swift */; };
 		AF6EBC722E16B5DE002D6101 /* RecipeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6EBC712E16B5DE002D6101 /* RecipeData.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF540E472E45FD4E0056397B /* ModifyIngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyIngredientView.swift; sourceTree = "<group>"; };
+		AF540E492E4617360056397B /* ModifyIngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyIngredientsView.swift; sourceTree = "<group>"; };
 		AF6A5CFE2E1FB340007E0F5A /* RecipeCategoryGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCategoryGridView.swift; sourceTree = "<group>"; };
 		AF6A5D662E27D4F9007E0F5A /* ModifyRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyRecipeView.swift; sourceTree = "<group>"; };
 		AF6EBC712E16B5DE002D6101 /* RecipeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeData.swift; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 			isa = PBXGroup;
 			children = (
 				AF6A5D662E27D4F9007E0F5A /* ModifyRecipeView.swift */,
+				AF540E492E4617360056397B /* ModifyIngredientsView.swift */,
+				AF540E472E45FD4E0056397B /* ModifyIngredientView.swift */,
 				AF78A9192E43906500B571E5 /* ModifyMainInformationView.swift */,
 			);
 			path = ModifyRecipes;
@@ -205,10 +211,12 @@
 				AF6A5CFF2E1FB340007E0F5A /* RecipeCategoryGridView.swift in Sources */,
 				AF6EBC722E16B5DE002D6101 /* RecipeData.swift in Sources */,
 				AF6A5D672E27D4F9007E0F5A /* ModifyRecipeView.swift in Sources */,
+				AF540E4A2E4617360056397B /* ModifyIngredientsView.swift in Sources */,
 				F278C9CA262E011800FE12B7 /* RecipesListView.swift in Sources */,
 				F278C9C8262E011800FE12B7 /* CookcademyApp.swift in Sources */,
 				AF78A91A2E43906500B571E5 /* ModifyMainInformationView.swift in Sources */,
 				AF6EBC762E17FFC5002D6101 /* AppColor.swift in Sources */,
+				AF540E482E45FD4E0056397B /* ModifyIngredientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,7 +351,7 @@
 				DEVELOPMENT_TEAM = JHKTLYD287;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Cookcademy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -365,7 +373,7 @@
 				DEVELOPMENT_TEAM = JHKTLYD287;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Cookcademy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

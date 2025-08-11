@@ -26,9 +26,9 @@ struct ModifyRecipeView: View {
                 
                 switch selection {
                 case .main:
-                    ModifyMainInformationView(mainInformation: $recipe.mainInformation)
+                    ModifyMainInformationView(mainInformation: $recipe.mainInformation) 
                 case .ingredients:
-                    Text("Ingredients Info")
+                    ModifyIngredientsView(ingredients: $recipe.ingredients)
                 case .directions:
                     Text("Directions Info")
                 }
@@ -42,7 +42,9 @@ struct ModifyRecipeView: View {
 struct ModifyRecipeView_Previews: PreviewProvider {
     @State static var recipe = Recipe()
     static var previews: some View {
-        ModifyRecipeView(recipe: $recipe)
+        NavigationView {
+            ModifyRecipeView(recipe: $recipe)
+        }
     }
 }
 

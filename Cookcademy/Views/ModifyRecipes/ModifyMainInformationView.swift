@@ -33,7 +33,7 @@ struct ModifyMainInformationView: View {
                         id: \.self) { category in
                     Text(category.rawValue)
                 }
-                        .pickerStyle(MenuPickerStyle())
+                        .pickerStyle(MenuPickerStyle()) // Идёт по умолчанию
                 
             }
             .listRowBackground(listBackgroundColor)
@@ -46,7 +46,6 @@ struct ModifyMainInformationView_Previews: PreviewProvider {
     @State static var mainInformation = MainInformation(name: "Cream pie", description: "Aaaahhhh...)", author: "", category: .dessert)
     
     static var previews: some View {
-        ModifyMainInformationView(mainInformation: $mainInformation) // TODO: в canvas не работает picker
-        
+        ModifyMainInformationView(mainInformation: $mainInformation)
     }
 }
