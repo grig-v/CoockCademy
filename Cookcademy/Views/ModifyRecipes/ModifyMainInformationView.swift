@@ -11,7 +11,7 @@ struct ModifyMainInformationView: View {
     private let listBackgroundColor = AppColor.background
     private let listTextColor = AppColor.foreground
     
-    @Binding var mainInformation: MainInformation // не соответствует MVVM
+    @Binding var mainInformation: MainInformation 
     
     var body: some View {
         Form {

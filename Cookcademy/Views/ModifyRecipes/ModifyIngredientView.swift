@@ -7,13 +7,18 @@
 
 import SwiftUI
 
-struct ModifyIngredientView: View {
+struct ModifyIngredientView: ModifyComponentView {
     @Binding var ingredient: Ingredient
-    let createAction: ((Ingredient) -> Void)
+    let createAction: (Ingredient) -> Void
     @Environment(\.presentationMode) private var mode
     
+    init(component: Binding<Ingredient>, createAction: @escaping (Ingredient) -> Void) {
+        self._ingredient = component
+        self.createAction = createAction
+    }
+    
     private let listBackgroundColor = AppColor.background
-      private let listTextColor = AppColor.foreground
+    private let listTextColor = AppColor.foreground
     
     var body: some View {
         VStack{
@@ -33,7 +38,7 @@ struct ModifyIngredientView: View {
                 }
                 .listRowBackground(listBackgroundColor)
                 Picker("Unit", selection: $ingredient.unit) {
-                    ForEach(Ingredient.Unit.allCases, id: \.self) { unit in
+                    ForEach(Component.Unit.allCases, id: \.self) { unit in
                         Text(unit.rawValue)
                         // В курсе пиккер был написан по-другому. Я упростил.
                     }
@@ -64,5 +69,5 @@ extension NumberFormatter {
 
 #Preview {
     @Previewable @State var emptyingredient = Ingredient()
-    ModifyIngredientView(ingredient: $emptyingredient) { ingredient in print(ingredient) }
+    ModifyIngredientView(component: $emptyingredient) { ingredient in print(ingredient) }
 }
