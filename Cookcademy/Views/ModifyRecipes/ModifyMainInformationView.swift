@@ -43,7 +43,7 @@ struct ModifyMainInformationView: View {
 }
 
 struct ModifyMainInformationView_Previews: PreviewProvider {
-    @State static var mainInformation = MainInformation(name: "Cream pie", description: "Aaaahhhh...)", author: "", category: .dessert)
+    @State static var mainInformation = MainInformation(name: "", description: "", author: "", category: .dessert)
     
     static var previews: some View {
         ModifyMainInformationView(mainInformation: $mainInformation)
