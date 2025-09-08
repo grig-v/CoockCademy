@@ -61,6 +61,11 @@ struct RecipeDetailView: View {
                     Button("Edit") {
                         isPresenting = true
                     }
+                    Button(action: {
+                        recipe.isFavorite.toggle()
+                    }) {
+                        Image(systemName: recipe.isFavorite ? "star.fill" : "star")
+                    }
                 }
             }
         }
@@ -70,7 +75,7 @@ struct RecipeDetailView: View {
                     .toolbar {
                         ToolbarItem(placement: .confirmationAction) {
                             Button("Save") {
-                                isPresenting = false //TODO: bug - щит закрывается до нажатия save
+                                isPresenting = false
                             }
                         }
                     }

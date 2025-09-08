@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RecipeCategoryGridView: View {
-    @StateObject private var recipeData = RecipeData()
+    @EnvironmentObject private var recipeData: RecipeData
     
     var body: some View {
         let columns = [GridItem(), GridItem()]
@@ -17,7 +17,7 @@ struct RecipeCategoryGridView: View {
                 LazyVGrid(columns: columns, content: {
                     ForEach(MainInformation.Category.allCases, id: \.self) { category in
                         NavigationLink(
-                            destination: RecipesListView(category: category),
+                            destination: RecipesListView(viewStyle: .singleCategory(category)),
                             label: {
                                 CategoryView(category: category)
                             })
@@ -44,8 +44,7 @@ struct CategoryView: View {
     }
 }
 
-struct RecipeCategoryGridView_Previews: PreviewProvider {
-    static var previews: some View {
+#Preview {
         RecipeCategoryGridView()
     }
-}
+
