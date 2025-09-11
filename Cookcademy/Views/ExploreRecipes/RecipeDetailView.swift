@@ -12,8 +12,9 @@ struct RecipeDetailView: View {
     
     @State private var isPresenting = false
     
-    private let listBackgroundColor = AppColor.background
-    private let listTextColor = AppColor.foreground
+    @AppStorage("hideOptionalSteps") private var hideOptionalSteps: Bool = false
+    @AppStorage("listBackgroundColor") private var listBackgroundColor = AppColor.background
+    @AppStorage("private let listTextColor") private var listTextColor = AppColor.foreground
     
     var body: some View {
         VStack {
@@ -42,12 +43,16 @@ struct RecipeDetailView: View {
                 Section(header: Text("Directions")) {
                     ForEach(recipe.directions.indices, id: \.self) { index in
                         let direction = recipe.directions[index]
-                        HStack {
-                            Text("\(index + 1). ").bold()
-                            Text("\(direction.isOptional ? "(Optional) " : "")"
-                                 + "\(direction.description)")
+                        if direction.isOptional && hideOptionalSteps {
+                            EmptyView()
+                        } else {
+                            HStack {
+                                let index = recipe.index(of: direction, excludingOptionalDirections: hideOptionalSteps) ?? 0
+                                Text("\(index + 1). ").bold()
+                                Text("\(direction.isOptional ? "(Optional) " : "")\(direction.description)")
+                            }
+                            .foregroundColor(listTextColor)
                         }
-                        .foregroundColor(listTextColor)
                     }
                 }
                 .listRowBackground(listBackgroundColor)

@@ -22,7 +22,12 @@ struct MainTabView: View {
             .tabItem {
                 Label("Favorites", systemImage: "star")
             }
+            SettingsView()
+                .tabItem {
+                    Label("Settings", systemImage: "gear")
+                }
         } .environmentObject(recipeData)
+        
     }
 }
 

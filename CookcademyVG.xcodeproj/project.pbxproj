@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF0CFF1F2E718B94002C7981 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0CFF1E2E718B94002C7981 /* SettingsView.swift */; };
 		AF540E482E45FD4E0056397B /* ModifyIngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF540E472E45FD4E0056397B /* ModifyIngredientView.swift */; };
 		AF540E4A2E4617360056397B /* ModifyComponentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF540E492E4617360056397B /* ModifyComponentsView.swift */; };
 		AF6A5CFF2E1FB340007E0F5A /* RecipeCategoryGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6A5CFE2E1FB340007E0F5A /* RecipeCategoryGridView.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF0CFF1E2E718B94002C7981 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		AF540E472E45FD4E0056397B /* ModifyIngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyIngredientView.swift; sourceTree = "<group>"; };
 		AF540E492E4617360056397B /* ModifyComponentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyComponentsView.swift; sourceTree = "<group>"; };
 		AF6A5CFE2E1FB340007E0F5A /* RecipeCategoryGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCategoryGridView.swift; sourceTree = "<group>"; };
@@ -61,7 +63,6 @@
 				F278C9C9262E011800FE12B7 /* RecipesListView.swift */,
 				AF6EBC732E17DE37002D6101 /* RecipeDetailView.swift */,
 				AF6A5CFE2E1FB340007E0F5A /* RecipeCategoryGridView.swift */,
-				AF872B0C2E6C4F5D000CB256 /* MainTabView.swift */,
 			);
 			path = ExploreRecipes;
 			sourceTree = "<group>";
@@ -90,6 +91,8 @@
 		AF6EBC6F2E16B06C002D6101 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AF0CFF1E2E718B94002C7981 /* SettingsView.swift */,
+				AF872B0C2E6C4F5D000CB256 /* MainTabView.swift */,
 				AF6A5D682E27D5A9007E0F5A /* ModifyRecipes */,
 				AF6A5D642E27D3ED007E0F5A /* ExploreRecipes */,
 			);
@@ -219,6 +222,7 @@
 				AFD6235E2E546F4B005551DC /* ModifyDirectionView.swift in Sources */,
 				AF6A5D672E27D4F9007E0F5A /* ModifyRecipeView.swift in Sources */,
 				AF540E4A2E4617360056397B /* ModifyComponentsView.swift in Sources */,
+				AF0CFF1F2E718B94002C7981 /* SettingsView.swift in Sources */,
 				AF872B0D2E6C4F5D000CB256 /* MainTabView.swift in Sources */,
 				F278C9CA262E011800FE12B7 /* RecipesListView.swift in Sources */,
 				F278C9C8262E011800FE12B7 /* CookcademyApp.swift in Sources */,
