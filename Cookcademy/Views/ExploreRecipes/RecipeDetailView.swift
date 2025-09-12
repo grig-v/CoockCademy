@@ -14,7 +14,7 @@ struct RecipeDetailView: View {
     
     @AppStorage("hideOptionalSteps") private var hideOptionalSteps: Bool = false
     @AppStorage("listBackgroundColor") private var listBackgroundColor = AppColor.background
-    @AppStorage("private let listTextColor") private var listTextColor = AppColor.foreground
+    @AppStorage("listTextColor") private var listTextColor = AppColor.foreground
     
     var body: some View {
         VStack {
@@ -42,12 +42,12 @@ struct RecipeDetailView: View {
                 
                 Section(header: Text("Directions")) {
                     ForEach(recipe.directions.indices, id: \.self) { index in
-                        let direction = recipe.directions[index]
-                        if direction.isOptional && hideOptionalSteps {
-                            EmptyView()
+                        let direction = recipe.directions[index]  // direction == итерация шагов рецепта
+                        if direction.isOptional && hideOptionalSteps {  // Если шаг необязателен && необязательные шаги скрыты (в настройках)
+                            EmptyView()  // Шаг пропускается во view
                         } else {
                             HStack {
-                                let index = recipe.index(of: direction, excludingOptionalDirections: hideOptionalSteps) ?? 0
+                                let index = recipe.index(of: direction, excludingOptionalDirections: hideOptionalSteps) ?? 0 
                                 Text("\(index + 1). ").bold()
                                 Text("\(direction.isOptional ? "(Optional) " : "")\(direction.description)")
                             }

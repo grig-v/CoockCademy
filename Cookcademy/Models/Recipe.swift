@@ -31,9 +31,9 @@ struct Recipe: Identifiable {
       mainInformation.isValid && !ingredients.isEmpty && !directions.isEmpty
     }
     
-    func index(of direction: Direction, excludingOptionalDirections: Bool) -> Int? {  //TODO: разобрать
-        let directions = directions.filter { excludingOptionalDirections ? !$0.isOptional : true }
-        let index = directions.firstIndex { $0.description == direction.description }
+    func index(of direction: Direction, excludingOptionalDirections: Bool) -> Int? {
+        let directions = directions.filter { excludingOptionalDirections ? !$0.isOptional : true } // Присваивает отфильтрованый массив без isOptional шагов, либо весь (неотфильтрованный) массив
+        let index = directions.firstIndex { $0.description == direction.description }  // ???
         return index
       }
 }
