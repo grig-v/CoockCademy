@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct RecipeDetailView: View {
-   @Binding var recipe: Recipe
+    @Binding var recipe: Recipe
+    @EnvironmentObject private var recipeData: RecipeData
     
     @State private var isPresenting = false
     
@@ -43,11 +44,11 @@ struct RecipeDetailView: View {
                 Section(header: Text("Directions")) {
                     ForEach(recipe.directions.indices, id: \.self) { index in
                         let direction = recipe.directions[index]  // direction == итерация шагов рецепта
-                        if direction.isOptional && hideOptionalSteps {  // Если шаг необязателен && необязательные шаги скрыты (в настройках)
+                        if direction.isOptional && hideOptionalSteps {  // Если шаг необязателен && необязательные шаги скрыты в настройках
                             EmptyView()  // Шаг пропускается во view
                         } else {
                             HStack {
-                                let index = recipe.index(of: direction, excludingOptionalDirections: hideOptionalSteps) ?? 0 
+                                let index = recipe.index(of: direction, excludingOptionalDirections: hideOptionalSteps) ?? 0
                                 Text("\(index + 1). ").bold()
                                 Text("\(direction.isOptional ? "(Optional) " : "")\(direction.description)")
                             }
@@ -85,6 +86,9 @@ struct RecipeDetailView: View {
                         }
                     }
                     .navigationTitle("Edit Recipe")
+            }
+            .onDisappear {
+                recipeData.saveRecipes()
             }
         }
     }

@@ -27,7 +27,9 @@ struct MainTabView: View {
                     Label("Settings", systemImage: "gear")
                 }
         } .environmentObject(recipeData)
-        
+            .onAppear {
+                recipeData.loadRecipes()
+            }
     }
 }
 
