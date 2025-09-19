@@ -2,7 +2,7 @@
 //  Recipe.swift
 //  Cookcademy
 //
-//  Created by dzthnxf dthf
+//  Created by Barborisss Macaroni
 //
 
 import Foundation

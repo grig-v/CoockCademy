@@ -2,7 +2,7 @@
 //  MainTabView.swift
 //  Cookcademy
 //
-//  Created by dzthnxf dthf on 06.09.25.
+//  Created by Barborisss Macaroni on 06.09.25.
 //
 
 import SwiftUI

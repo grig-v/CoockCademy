@@ -2,7 +2,7 @@
 //  ModifyRecipeView.swift
 //  Cookcademy
 //
-//  Created by dzthnxf dthf on 16.07.25.
+//  Created by Barborisss Macaroni on 16.07.25.
 //
 
 import SwiftUI

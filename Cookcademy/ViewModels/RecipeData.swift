@@ -2,7 +2,7 @@
 //  RecipeData.swift
 //  Cookcademy
 //
-//  Created by dzthnxf dthf on 03.07.25.
+//  Created by Barborisss Macaroni on 03.07.25.
 //
 
 import Foundation

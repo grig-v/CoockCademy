@@ -2,7 +2,7 @@
 //  SettingsView.swift
 //  Cookcademy
 //
-//  Created by dzthnxf dthf on 10.09.25.
+//  Created by Barborisss Macaroni on 10.09.25.
 //
 
 import SwiftUI

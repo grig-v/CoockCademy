@@ -2,7 +2,7 @@
 //  RecipeCategoryGridView.swift
 //  Cookcademy
 //
-//  Created by dzthnxf dthf on 10.07.25.
+//  Created by Barborisss Macaroni on 10.07.25.
 //
 
 import SwiftUI

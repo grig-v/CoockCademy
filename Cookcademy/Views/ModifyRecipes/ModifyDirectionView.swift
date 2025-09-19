@@ -2,7 +2,7 @@
 //  ModifyDirectionView.swift
 //  Cookcademy
 //
-//  Created by dzthnxf dthf on 19.08.25.
+//  Created by Barborisss Macaroni on 19.08.25.
 //
 
 import SwiftUI
